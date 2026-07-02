@@ -87,7 +87,7 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
   }
-  .header-box, .redeem-section { grid-column: span 2; }
+  .header-box { grid-column: span 2; }
 }
 
 .card {
@@ -124,50 +124,6 @@ body {
 .buy-btn { background: #facc15; color: #111827; }
 .wait-text { text-align: center; font-size: 12px; color: #94a3b8; margin-top: 10px; }
 
-/* --- Redeem Grid --- */
-.redeem-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-@media (min-width: 600px) { .redeem-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 900px) { .redeem-grid { grid-template-columns: 1fr 1fr 1fr; } }
-
-.redeem-card {
-  background: #1e293b;
-  border-radius: 15px;
-  padding: 15px;
-}
-
-.card-header { display: flex; align-items: center; margin-bottom: 10px; }
-.logo-circle {
-  width: 38px; height: 38px; border-radius: 50%; display: flex;
-  justify-content: center; align-items: center; font-size: 10px;
-  font-weight: bold; margin-right: 12px; color: #fff;
-}
-
-.dtac-circle { background: #00bfff; }
-.true-circle { background: #ff0000; }
-.ais-circle { background: #94d500; }
-
-.brand-text { font-weight: 700; font-size: 15px; color: #f39c12; }
-.price-tag { color: #94a3b8; font-size: 13px; margin-left: 50px; display: block; margin-top: -12px; margin-bottom: 12px; }
-
-.dial-box {
-  background: #0f172a;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.code-text { color: #2ecc71; font-size: 16px; font-weight: 700; }
-.call-btn {
-  background: #ef4444; color: #fff; text-decoration: none;
-  padding: 6px 12px; border-radius: 8px; font-size: 11px; font-weight: 700;
-}
 </style>
 </head>
 
@@ -208,41 +164,6 @@ body {
       <div class="wait-text">နှိပ်ပြီးရင်ခနစောင့်ပေးပါ</div>
     </div>
 
-    <div class="card redeem-section">
-      <div class="section-title">🎁 Redeem Your Codes</div>
-      <div class="redeem-grid">
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle dtac-circle">dtac</div><div class="brand-text">DTAC JAIDEE</div></div>
-          <span class="price-tag">30 THB</span>
-          <div class="dial-box"><span class="code-text">*117*30#</span><a href="tel:*117*30%23" class="call-btn">Call Now</a></div>
-        </div>
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle true-circle">true</div><div class="brand-text">TRUE VDO</div></div>
-          <span class="price-tag">85 THB</span>
-          <div class="dial-box"><span class="code-text">*900*8234#</span><a href="tel:*900*8234%23" class="call-btn">Call Now</a></div>
-        </div>
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle true-circle">true</div><div class="brand-text">TRUE TWITTER</div></div>
-          <span class="price-tag">53 THB</span>
-          <div class="dial-box"><span class="code-text">*900*3509#</span><a href="tel:*900*3509%23" class="call-btn">Call Now</a></div>
-        </div>
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle true-circle">true</div><div class="brand-text">TRUE VIBER</div></div>
-          <span class="price-tag">53 THB</span>
-          <div class="dial-box"><span class="code-text">*900*3809#</span><a href="tel:*900*3809%23" class="call-btn">Call Now</a></div>
-        </div>
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle ais-circle">ais</div><div class="brand-text">AIS PLAY</div></div>
-          <span class="price-tag">64 THB</span>
-          <div class="dial-box"><span class="code-text">*777*885#</span><a href="tel:*777*885%23" class="call-btn">Call Now</a></div>
-        </div>
-        <div class="redeem-card">
-          <div class="card-header"><div class="logo-circle ais-circle">ais</div><div class="brand-text">AIS 64 KBPS</div></div>
-          <span class="price-tag">32 THB</span>
-          <div class="dial-box"><span class="code-text">*777*7067#</span><a href="tel:*777*7067%23" class="call-btn">Call Now</a></div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
