@@ -4,22 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080d19">
-<meta name="description" content="AGE VPN V5.0 Premium VPN Service">
-<title>AGE VPN V5.0</title>
+<meta name="theme-color" content="#080718">
+<title>AGE VPN | Premium VPN</title>
 
 <link rel="icon" href="https://raw.githubusercontent.com/kyawkolatt2026-alt/vip/main/mtk_logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg:#080d19;
-  --card:#111b2c;
-  --gold:#f5c96b;
-  --blue:#69a5ff;
-  --text:#f5f7ff;
-  --muted:#91a0b8;
+  --bg:#080718;
+  --blue:#26d9ff;
+  --purple:#9b5cff;
+  --pink:#ff4fd8;
+  --white:#fff;
 }
 
 * {
@@ -30,229 +28,332 @@ body {
   margin:0;
   min-height:100vh;
   padding:20px;
-  color:var(--text);
-  font-family:'DM Sans','Noto Sans Myanmar',sans-serif;
+  color:white;
+  font-family:'Manrope','Noto Sans Myanmar',sans-serif;
   background:
-  radial-gradient(circle at 50% 0%,#18315b 0%,transparent 40%),
-  linear-gradient(145deg,#080d19,#10192b);
+    radial-gradient(ellipse at 10% 5%,#173d8b75,transparent 35%),
+    radial-gradient(ellipse at 95% 30%,#8024ad50,transparent 35%),
+    radial-gradient(ellipse at 50% 100%,#103c7950,transparent 40%),
+    var(--bg);
+  overflow-x:hidden;
+}
+
+body::before,
+body::after {
+  content:"";
+  position:fixed;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  filter:blur(110px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+body::before {
+  background:#087dff55;
+  top:10%;
+  left:-180px;
+}
+
+body::after {
+  background:#b52cff45;
+  bottom:0;
+  right:-180px;
 }
 
 .page {
-  max-width:900px;
+  width:100%;
+  max-width:950px;
   margin:auto;
 }
+
+/* TOP BAR */
 
 .topbar {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  color:var(--muted);
+  padding:13px 17px;
+  border:1px solid #ffffff17;
+  border-radius:15px;
+  background:#ffffff09;
+  backdrop-filter:blur(15px);
+  color:#a8b6d5;
   font-size:12px;
-  padding:12px 4px;
-  border-bottom:1px solid #ffffff12;
 }
 
 .live {
-  color:#70e6a4;
+  color:#54ffb0;
+  font-weight:700;
 }
+
+.dot {
+  display:inline-block;
+  width:7px;
+  height:7px;
+  margin-right:6px;
+  border-radius:50%;
+  background:#45ffae;
+  box-shadow:0 0 12px #45ffae;
+}
+
+/* HERO */
 
 .hero {
   text-align:center;
-  padding:45px 10px 38px;
+  padding:53px 10px 42px;
 }
 
-.logo {
-  width:105px;
-  height:105px;
-  margin:auto auto 18px;
+.logo-wrap {
+  width:116px;
+  height:116px;
   padding:4px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#f5d98e,#548df5);
-  box-shadow:0 0 45px #4b8cff45;
+  margin:0 auto 22px;
+  border-radius:35px;
+  background:linear-gradient(135deg,#25e3ff,#7958ff,#ff48d8);
+  box-shadow:
+    0 0 20px #26d9ff65,
+    0 0 65px #9b5cff50;
+  animation:glow 3s ease-in-out infinite alternate;
 }
 
-.logo img {
+.logo-wrap img {
   width:100%;
   height:100%;
+  border-radius:31px;
   object-fit:cover;
-  border-radius:26px;
+  background:#111;
+}
+
+@keyframes glow {
+  from {box-shadow:0 0 20px #26d9ff55,0 0 40px #9b5cff30;}
+  to {box-shadow:0 0 35px #26d9ff95,0 0 75px #9b5cff75;}
 }
 
 .brand {
   margin:0;
-  font:800 clamp(38px,8vw,60px)/1.1 'Manrope',sans-serif;
+  font-size:clamp(43px,9vw,68px);
+  font-weight:800;
   letter-spacing:-3px;
-  background:linear-gradient(90deg,#fff,#a7caff,#f5d58b);
-  color:transparent;
+  line-height:1.1;
+  background:linear-gradient(100deg,#ffffff 10%,#54eaff 48%,#c28bff 85%,#ff78df);
   background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 0 17px #4c9aff45);
 }
 
 .version {
   display:inline-block;
-  margin-top:12px;
-  padding:7px 15px;
-  border:1px solid #f5c96b55;
+  margin-top:16px;
+  padding:8px 19px;
   border-radius:30px;
-  color:var(--gold);
-  background:#f5c96b12;
+  border:1px solid #32dfff70;
+  background:linear-gradient(100deg,#14dfff20,#9d5aff25);
+  color:#6deaff;
   font-size:11px;
   font-weight:800;
   letter-spacing:2px;
+  box-shadow:0 0 20px #26d9ff17;
 }
 
 .tagline {
-  color:#a9b9d0;
+  color:#b3b8d7;
   font-size:13px;
-  margin-top:15px;
-  letter-spacing:2px;
+  letter-spacing:3px;
+  margin-top:17px;
 }
+
+/* FEATURE CHIPS */
 
 .features {
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
-  gap:9px;
-  margin-top:22px;
+  justify-content:center;
+  gap:10px;
+  margin-top:23px;
 }
 
 .feature {
-  padding:9px 13px;
-  border:1px solid #ffffff17;
+  padding:9px 14px;
+  border:1px solid #ffffff20;
   border-radius:30px;
-  background:#ffffff08;
-  color:#c6d2e5;
+  background:#ffffff0b;
+  color:#d8e6ff;
   font-size:11px;
 }
+
+/* CARDS */
 
 .grid {
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:18px;
+  gap:20px;
 }
 
 .card {
-  padding:24px;
-  border:1px solid #ffffff12;
+  position:relative;
+  overflow:hidden;
+  padding:25px;
   border-radius:25px;
-  background:linear-gradient(145deg,#18253b,#0e1728);
-  box-shadow:0 20px 50px #00000035;
-  transition:.25s;
+  border:1px solid #ffffff20;
+  background:linear-gradient(145deg,#171b39eF,#11132beF);
+  box-shadow:0 20px 60px #00000045;
+  transition:.3s;
 }
 
 .card:hover {
-  transform:translateY(-4px);
-  border-color:#75aaff55;
+  transform:translateY(-5px);
+  border-color:#42dfff75;
+  box-shadow:0 20px 55px #236dff30;
 }
 
-.card-title {
+.card::before {
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  right:-100px;
+  top:-110px;
+  border-radius:50%;
+  background:#4e8dff35;
+  filter:blur(45px);
+  pointer-events:none;
+}
+
+.card-heading {
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:13px;
   margin-bottom:23px;
 }
 
-.icon {
-  width:45px;
-  height:45px;
+.heading-icon {
+  width:48px;
+  height:48px;
   display:grid;
   place-items:center;
-  border-radius:15px;
-  background:#5798ff20;
-  color:#86b6ff;
-  font-size:23px;
+  border-radius:16px;
+  color:#5beaff;
+  font-size:24px;
+  background:linear-gradient(135deg,#1acfff30,#655bff30);
+  border:1px solid #49dfff45;
+  box-shadow:0 0 20px #28dfff15;
 }
 
-.icon.gold {
-  color:var(--gold);
-  background:#f5c96b18;
+.heading-icon.vip {
+  color:#ff82e5;
+  background:linear-gradient(135deg,#ff45d830,#9b45ff35);
+  border-color:#e85bff50;
 }
 
 .eyebrow {
-  color:#8193ad;
+  margin:0 0 4px;
+  color:#8d9cbd;
   font-size:10px;
   letter-spacing:2px;
-  margin:0 0 5px;
+  font-weight:700;
 }
 
-.card-title h2 {
+.card-heading h2 {
   margin:0;
-  font-size:17px;
+  font-size:16px;
+  font-weight:800;
 }
 
-.app-box {
+/* APP PANEL */
+
+.app-panel {
   padding:27px 15px;
   text-align:center;
-  border:1px solid #ffffff12;
   border-radius:20px;
-  background:#ffffff05;
+  border:1px solid #48bfff30;
+  background:linear-gradient(145deg,#14284b85,#17163885);
 }
 
 .app-logo {
-  width:75px;
-  height:75px;
-  margin:0 auto 15px;
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 8px 30px #508dff35;
+  width:80px;
+  height:80px;
+  padding:3px;
+  margin:0 auto 16px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#29dcff,#8a58ff);
+  box-shadow:0 0 30px #26bfff45;
 }
 
 .app-logo img {
   width:100%;
   height:100%;
   object-fit:cover;
+  border-radius:22px;
 }
 
 .app-name {
-  font:800 20px 'Manrope',sans-serif;
   margin:0;
+  font-size:21px;
+  font-weight:800;
 }
 
 .app-info {
-  color:var(--muted);
+  color:#aab9dc;
   font-size:12px;
-  margin-top:9px;
+  line-height:1.9;
+  margin:9px 0 0;
 }
 
+/* BUTTONS */
+
 .btn {
+  min-height:55px;
+  margin-top:19px;
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:10px;
-  min-height:54px;
-  margin-top:19px;
-  border-radius:15px;
+  gap:11px;
+  border-radius:16px;
   text-decoration:none;
   font-size:13px;
   font-weight:800;
-  transition:.2s;
+  transition:.25s;
 }
 
 .btn:hover {
-  transform:translateY(-3px);
-  filter:brightness(1.1);
+  transform:translateY(-3px) scale(1.01);
+  filter:brightness(1.13);
 }
 
 .download {
-  color:white;
-  background:linear-gradient(110deg,#3475ee,#60a7ff);
-  box-shadow:0 10px 25px #3475ee40;
+  color:#071329;
+  background:linear-gradient(105deg,#26dcff,#5b9bff,#8c69ff);
+  box-shadow:0 8px 28px #27aaff45;
 }
 
+.download span {
+  font-size:20px;
+}
+
+/* VIP PANEL */
+
 .vip-panel {
+  position:relative;
+  overflow:hidden;
   padding:27px 15px;
   text-align:center;
-  border:1px solid #f5c96b35;
   border-radius:20px;
-  background:radial-gradient(circle at top,#f5c96b18,transparent 75%);
+  border:1px solid #e85aff55;
+  background:
+    radial-gradient(ellipse at 50% 0%,#e83dff40,transparent 70%),
+    linear-gradient(145deg,#32194e,#1c173a);
 }
 
 .vip-label {
   display:inline-block;
-  padding:7px 14px;
+  padding:8px 15px;
+  border:1px solid #ff72e875;
   border-radius:30px;
-  border:1px solid #f5c96b50;
-  color:var(--gold);
-  background:#f5c96b12;
+  background:#ff4fd820;
+  color:#ff9aeb;
   font-size:10px;
   font-weight:800;
   letter-spacing:2px;
@@ -261,50 +362,60 @@ body {
 .price {
   display:block;
   margin:17px 0 5px;
-  color:var(--gold);
-  font:800 43px 'Manrope',sans-serif;
+  font-size:45px;
+  font-weight:800;
+  letter-spacing:-2px;
+  color:#ff9de9;
+  text-shadow:0 0 25px #ff4fd875;
 }
 
 .price-info {
-  color:#c2ccdc;
+  color:#e1c9ed;
   font-size:12px;
 }
 
 .buy {
-  color:#211707;
-  background:linear-gradient(110deg,#f7d98c,#edb947);
-  box-shadow:0 10px 25px #edb94725;
+  color:white;
+  background:linear-gradient(105deg,#a63cff,#e54dce,#ff6c9e);
+  box-shadow:0 8px 28px #d23dff40;
 }
 
 .note {
-  text-align:center;
-  color:#8190a7;
+  color:#a6a3c5;
   font-size:11px;
+  text-align:center;
   margin-top:14px;
 }
+
+/* FOOTER */
 
 .footer {
   padding:35px 10px 15px;
   text-align:center;
-  color:#78869c;
+  color:#7887aa;
   font-size:11px;
+  line-height:2;
 }
 
 .footer strong {
-  color:var(--gold);
+  color:#6eeaff;
 }
 
+/* MOBILE */
+
 @media(max-width:650px) {
-  body {padding:15px;}
-  .hero {padding:35px 5px 28px;}
-  .logo {width:90px;height:90px;border-radius:25px;}
-  .logo img {border-radius:21px;}
+  body {padding:13px;}
+  .hero {padding:40px 5px 30px;}
+  .logo-wrap {width:95px;height:95px;border-radius:29px;}
+  .logo-wrap img {border-radius:25px;}
   .grid {grid-template-columns:1fr;gap:15px;}
   .card {padding:20px;}
+  .topbar {font-size:10px;padding:12px;}
 }
 
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after {
+    animation:none!important;
     transition:none!important;
   }
 }
@@ -315,75 +426,78 @@ body {
 
 <main class="page">
 
+<!-- TOP BAR -->
 <div class="topbar">
   <span id="date">-- --- ----</span>
-  <span class="live">● LIVE <span id="time">--:--:--</span></span>
+  <span class="live">
+    <i class="dot"></i> LIVE
+    <span id="time">--:--:--</span>
+  </span>
 </div>
 
+<!-- HERO -->
 <header class="hero">
 
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/kyawkolatt2026-alt/vip/main/mtk_logo.png" alt="AGE VPN">
+  <div class="logo-wrap">
+    <img src="https://raw.githubusercontent.com/kyawkolatt2026-alt/vip/main/mtk_logo.png" alt="AGE VPN Logo">
   </div>
 
   <h1 class="brand">AGE VPN</h1>
 
-  <div class="version">VERSION 5.0</div>
+  <div class="version">✦ VERSION 5.0 ✦</div>
 
   <p class="tagline">SECURE · FAST · RELIABLE</p>
 
   <div class="features">
-    <span class="feature">◈ Secure Connection</span>
+    <span class="feature">🔒 Secure Connection</span>
     <span class="feature">⚡ High Speed</span>
     <span class="feature">✦ Premium Service</span>
   </div>
 
 </header>
 
+<!-- MAIN CARDS -->
 <section class="grid">
 
-  <!-- DOWNLOAD CARD -->
-
+  <!-- DOWNLOAD -->
   <article class="card">
 
-    <div class="card-title">
-      <div class="icon">⇩</div>
+    <div class="card-heading">
+      <div class="heading-icon">⇩</div>
       <div>
         <p class="eyebrow">GET CONNECTED</p>
         <h2>Download Application</h2>
       </div>
     </div>
 
-    <div class="app-box">
+    <div class="app-panel">
 
       <div class="app-logo">
-        <img src="https://raw.githubusercontent.com/kyawkolatt2026-alt/vip/main/mtk_logo.png" alt="App Logo">
+        <img src="https://raw.githubusercontent.com/kyawkolatt2026-alt/vip/main/mtk_logo.png" alt="AGE VPN">
       </div>
 
       <h3 class="app-name">AGE VPN V5.0</h3>
 
       <p class="app-info">
         Premium VPN Application<br>
-        Fast, Secure & Reliable
+        Fast · Secure · Reliable
       </p>
 
     </div>
 
     <a
       href="https://github.com/kyawkolatt2026-alt/thai/releases/download/V5.0/AGEVPN_V5.apk"
-      class="btn download"
-      download>
-      ⇩ DOWNLOAD APK
+      class="btn download">
+      <span>⇩</span> DOWNLOAD APK
     </a>
 
   </article>
 
-  <!-- VIP CARD -->
-
+  <!-- VIP -->
   <article class="card">
 
-    <div class="card-title">
-      <div class="icon gold">✦</div>
+    <div class="card-heading">
+      <div class="heading-icon vip">✦</div>
       <div>
         <p class="eyebrow">UNLOCK MORE</p>
         <h2>VIP Premium</h2>
@@ -392,7 +506,7 @@ body {
 
     <div class="vip-panel">
 
-      <span class="vip-label">PREMIUM ACCESS</span>
+      <span class="vip-label">✦ PREMIUM ACCESS ✦</span>
 
       <strong class="price">50 THB</strong>
 
@@ -420,7 +534,7 @@ body {
 
 <footer class="footer">
   © 2026 <strong>AGE VPN</strong><br>
-  Premium Secure Connection
+  PREMIUM SECURE CONNECTION
 </footer>
 
 </main>
